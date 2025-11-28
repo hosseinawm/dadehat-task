@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Homa";
+  src: url(./assets/fonts/Far_Homa.ttf) format("truetype");
+}
+body {
+  background-color: rgb(29, 39, 76);
+  height: 100vh;
+  font-family: Homa;
+  color: white;
+  direction: rtl;
+}
