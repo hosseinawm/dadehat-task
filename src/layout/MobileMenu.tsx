@@ -12,7 +12,7 @@ type MobileMenuProps = {
 const MobileMenu = ({ menuOpen, setMenuOpen }: MobileMenuProps) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex items-center justify-center 
+      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.9)] z-40 flex items-center justify-center 
         ${
           menuOpen
             ? "h-screen opacity-100 pointer-events-auto "

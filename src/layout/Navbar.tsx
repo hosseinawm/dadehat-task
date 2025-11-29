@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex flex-col items-center ">
+      <header className="sticky top-0 z-50 flex flex-col items-center">
         <div className="flex md:flex-row justify-end gap-3 md:gap-6 text-sm mt-4 w-[95%]">
           <div className="flex justify-end gap-6 w-full md:w-auto text-xs">
             <a href="#">تماس با ما</a>
