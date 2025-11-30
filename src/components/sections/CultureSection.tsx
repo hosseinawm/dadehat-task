@@ -40,37 +40,41 @@ const benefits = [
 
 const CultureSection = () => {
   return (
-    <section className="w-full flex flex-col items-center mt-16 mb-44 px-4">
-      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+    <section className='w-full flex flex-col items-center mt-16 mb-44 px-4'>
+      <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold text-center'>
         فرهنگ کاری در داده‌هات
       </h3>
 
-      <div className="flex flex-col items-center mt-10 w-full max-w-4xl space-y-4">
+      <div className='flex flex-col items-center mt-10 w-full max-w-4xl space-y-4'>
         {dadehatCulture.map((item, index) => (
           <div
             key={index}
-            className="w-full bg-[rgb(43,53,88)] rounded-2xl p-5 flex justify-between md:items-center md:justify-between gap-4"
+            className='w-full bg-[rgb(43,53,88)] rounded-2xl p-5 flex justify-between md:items-center md:justify-between gap-4'
           >
-            <p className="text-right text-lg md:text-xl">{item.description}</p>
+            <p className='text-right text-lg md:text-xl'>{item.description}</p>
 
-            <div className="flex gap-2 justify-end flex-col md:flex-row">
-              <span className="px-4 py-4 bg-[rgb(29,37,65)] text-md md:text-lg rounded-full">
+            <div className='flex gap-2 justify-end flex-col md:flex-row'>
+              <span className='px-4 py-4 bg-[rgb(29,37,65)] text-md md:text-lg rounded-full'>
                 {item.tags[0]}
               </span>
-              <span className="px-4 py-4 bg-[rgb(64,73,104)] text-md md:text-lg rounded-full">
+              <span className='px-4 py-4 bg-[rgb(64,73,104)] text-md md:text-lg rounded-full'>
                 {item.tags[1]}
               </span>
             </div>
           </div>
         ))}
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center mt-28  w-[95%] text-xl">
+      <div
+        className='flex flex-col lg:flex-row justify-between items-center mt-28  w-[95%] text-xl'
+        data-aos='fade-up'
+        data-aos-duration='2000'
+      >
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center "
+            className='flex flex-col items-center justify-center'
           >
-            <img src={benefit.image} alt="" />
+            <img src={benefit.image} alt='' />
             <p>{benefit.title}</p>
           </div>
         ))}
