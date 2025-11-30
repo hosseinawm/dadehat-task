@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { Panorama } from "swiper/modules";
 
 import staff1 from "../../assets/images/staff/bohemian-man-with-his-arms-crossed.jpg";
 import staff2 from "../../assets/images/staff/confident-bearded-macho-man-looks-pleased-has-friendly-kind-grin-face-wears-round-spectacles-pink-jumper.jpg";
