@@ -17,11 +17,11 @@ const items = [staff1, staff2, staff3, staff4, staff5, staff6, staff7, staff8];
 export default function StaffCarousel() {
   return (
     <section
-      className='h-screen flex items-center justify-center px-4'
-      data-aos='fade-up'
+      className="h-screen flex items-center justify-center px-4"
+      data-aos="fade-up"
     >
       <Swiper
-        effect='coverflow'
+        effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={4}
@@ -35,15 +35,15 @@ export default function StaffCarousel() {
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Autoplay]}
-        className='w-full max-w-7xl'
+        className="w-full max-w-7xl"
       >
         {items.map((img, index) => (
-          <SwiperSlide key={index} className='flex justify-center'>
-            <div className='w-64 h-96 rounded-3xl overflow-hidden shadow-xl'>
+          <SwiperSlide key={index} className="flex justify-center">
+            <div className="w-64 h-96 rounded-3xl overflow-hidden shadow-xl">
               <img
                 src={img}
-                alt='staff'
-                className='w-full h-full object-cover'
+                alt="staff"
+                className="w-full h-full object-cover"
               />
             </div>
           </SwiperSlide>
