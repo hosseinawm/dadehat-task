@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 import staff1 from "../../assets/images/staff/bohemian-man-with-his-arms-crossed.jpg";
 import staff2 from "../../assets/images/staff/confident-bearded-macho-man-looks-pleased-has-friendly-kind-grin-face-wears-round-spectacles-pink-jumper.jpg";
@@ -16,36 +17,62 @@ const items = [staff1, staff2, staff3, staff4, staff5, staff6, staff7, staff8];
 
 export default function StaffCarousel() {
   return (
-    <section
-      className="h-screen flex items-center justify-center px-4"
-      data-aos="fade-up"
-    >
+    <section className="pt-32 px-4 flex justify-center">
       <Swiper
         effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={4}
-        loop={true}
-        autoplay={{ delay: 2000 }}
-        coverflowEffect={{
-          rotate: 15,
-          stretch: 0,
-          depth: 250,
-          modifier: 1.2,
-          slideShadows: false,
-        }}
+        grabCursor
+        centeredSlides
+        loop
+        autoplay={{ delay: 2500 }}
         modules={[EffectCoverflow, Autoplay]}
         className="w-full max-w-7xl"
+        breakpoints={{
+          0: {
+            slidesPerView: 1.4,
+            coverflowEffect: {
+              rotate: 5,
+              depth: 80,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+          640: {
+            slidesPerView: 2.3,
+            coverflowEffect: {
+              rotate: 10,
+              depth: 150,
+              modifier: 1.1,
+              slideShadows: false,
+            },
+          },
+          1024: {
+            slidesPerView: 4,
+            coverflowEffect: {
+              rotate: 15,
+              depth: 260,
+              modifier: 1.2,
+              slideShadows: false,
+            },
+          },
+        }}
       >
         {items.map((img, index) => (
           <SwiperSlide key={index} className="flex justify-center">
-            <div className="w-64 h-96 rounded-3xl overflow-hidden shadow-xl">
+            <figure
+              className="
+                rounded-3xl overflow-hidden shadow-xl
+                w-48 h-72
+                sm:w-56 sm:h-80
+                lg:w-64 lg:h-96
+              "
+            >
               <img
                 src={img}
                 alt="staff"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </figure>
           </SwiperSlide>
         ))}
       </Swiper>
